@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, NavLink, Navigate, useNavigate, useLocation } from 'react-router-dom';
-import { Home, Leaf, Bird, Fish, Apple, Carrot, GraduationCap, Calculator, LogOut, CarTaxiFront, Flower2Icon, Loader, Gamepad2Icon, Menu, X,computer } from 'lucide-react';
+import { Home, Leaf, Bird, Fish, Apple, Carrot, GraduationCap, Calculator, LogOut, CarTaxiFront, Flower2Icon,Box, Loader,Code, Gamepad2Icon, Menu, X, Computer ,Diamond} from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import HomePage from './pages/HomePage';
 import AnimalsPage from './pages/AnimalsPage';
 import CPage  from './pages/clanguage';
+import FrontPage  from './pages/FrontEnd';
+import BackPage  from './pages/BackEnd';
+import DevPage  from './pages/Develop';
 import AquaticPage from './pages/AquaticPage';
 import BirdsPage from './pages/BirdsPage';
 import FruitsPage from './pages/FruitsPage';
@@ -41,7 +44,7 @@ import { getEmotionEmoji, getEmotionColor } from './utils/emotionUtils';
 import FaceReg from './Face';
 import { VoiceNavigationProvider } from './contexts/VoiceNavigationContext';
 import { VoiceContext } from './contexts/VoiceContext';
-import VoiceAssistant from './components/VoiceAssistant';
+// import VoiceAssistant from './components/VoiceAssistant';
 import VoiceControl from './components/VoiceControl';
 
 // Define theme colors for each navigation item
@@ -62,15 +65,18 @@ const navColors = {
 // Navigation items data
 const navItems = [
   { path: "/", label: "Home", icon: Home, color: navColors.home },
-  { path: "/animals", label: "Animals", icon: Leaf, color: navColors.animals },
-  { path: "/C", label: "Programming", icon: computer, color: navColors.animals },
-  { path: "/aquatic", label: "Aquatic", icon: Fish, color: navColors.aquatic },
-  { path: "/birds", label: "Birds", icon: Bird, color: navColors.birds },
-  { path: "/fruits", label: "Fruits", icon: Apple, color: navColors.fruits },
-  { path: "/vegetables", label: "Vegetables", icon: Carrot, color: navColors.vegetables },
-  { path: "/flowers", label: "Flowers", icon: Flower2Icon, color: navColors.flowers },
-  { path: "/vehicles", label: "Vehicle", icon: CarTaxiFront, color: navColors.vehicles },
-  { path: "/math", label: "Math", icon: Calculator, color: navColors.math },
+  // { path: "/animals", label: "Animals", icon: Leaf, color: navColors.animals },
+  { path: "/C", label: "Programming", icon: Computer, color: navColors.animals },
+  { path: "/front", label: "FrontEnd", icon: Diamond, color: navColors.aquatic },
+  { path: "/back", label: "BackEnd", icon: Code, color: navColors.aquatic },
+  { path: "/deve", label: "Develop", icon: Box, color: navColors.aquatic },
+  // { path: "/aquatic", label: "Aquatic", icon: Fish, color: navColors.aquatic },
+  // { path: "/birds", label: "Birds", icon: Bird, color: navColors.birds },
+  // { path: "/fruits", label: "Fruits", icon: Apple, color: navColors.fruits },
+  // { path: "/vegetables", label: "Vegetables", icon: Carrot, color: navColors.vegetables },
+  // { path: "/flowers", label: "Flowers", icon: Flower2Icon, color: navColors.flowers },
+  // { path: "/vehicles", label: "Vehicle", icon: CarTaxiFront, color: navColors.vehicles },
+  // { path: "/math", label: "Math", icon: Calculator, color: navColors.math },
   { path: "/games", label: "Games", icon: Gamepad2Icon, color: navColors.games },
   { path: "/testing", label: "Tests", icon: GraduationCap, color: navColors.tests, requireAuth: true },
 ];
@@ -250,7 +256,7 @@ function AppRoutes() {
             <div className="flex items-center pr-2 border-r">
               <NavLink to="/" className="flex items-center">
                 <img src={image} alt="Kid Learning Logo" className="h-8 w-8" />
-                <span className="ml-1 text-base font-semibold text-gray-900">KL</span>
+                <span className="ml-1 text-base font-semibold text-gray-900">GameX</span>
               </NavLink>
             </div>
 
@@ -398,6 +404,9 @@ function AppRoutes() {
           <Route path="/face" element={<FaceReg/>} />
           <Route path="/animals" element={<AnimalsPage />} />
           <Route path="/C" element={<CPage />} />
+          <Route path="/front" element={<FrontPage />} />
+          <Route path="/back" element={<BackPage />} />
+          <Route path="/deve" element={<DevPage />} />
           <Route path="/aquatic" element={<AquaticPage />} />
           <Route path="/birds" element={<BirdsPage />} />
           <Route path="/fruits" element={<FruitsPage />} />

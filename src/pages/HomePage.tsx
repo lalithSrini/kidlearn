@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PawPrint, Bird, Fish, Apple, Carrot, Flower2, Car, Calculator } from 'lucide-react';
+import { PawPrint, Bird, Fish, Apple, Carrot, Flower2, Car, Calculator,Computer,Diamond,Code ,Box} from 'lucide-react';
 
 function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12">Welcome to Nature's Encyclopedia</h1>
+      <h1 className="text-4xl font-bold text-center mb-12">Welcome to GameX</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category) => (
           <Link
@@ -26,15 +26,35 @@ function HomePage() {
 }
 
 const categories = [
+  
+  {
+    title: 'Programming',
+    path: '/C',
+    icon: <Computer className="w-8 h-8 text-green-600" />,
+    description: 'Programming isn’t about typing code; it’s about thinking, problem-solving, and creating something meaningful from logic.'
+  },
+  
+  {
+    title: 'FrontEnd',
+    path: '/front',
+    icon: <Diamond className="w-8 h-8 text-blue-600" />,
+    description: 'Frontend development is the part of web development that focuses on what users see and interact with. It combines coding, design, and creativity to create websites and applications that are both visually appealing and user-friendly.'
+  },
+  {
+    title: 'BackEnd',
+    path: '/back',
+    icon: <Code className="w-8 h-8 text-yellow-600" />,
+    description: 'Backend technologies are used to build the server-side of applications, manage data, and handle business logic. Node.js allows developers to use JavaScript on the server to create fast and scalable applications.'
+  },
+  {
+    title: 'Development Tools',
+    path: '/deve',
+    icon: <Box className="w-8 h-8 text-yellow-600" />,
+    description: 'Development tools are software applications that help developers build, test, and optimize mobile apps efficiently.'
+  },
   {
     title: 'Animals',
     path: '/animals',
-    icon: <PawPrint className="w-8 h-8 text-green-600" />,
-    description: 'Discover the diverse world of land animals, from majestic mammals to fascinating reptiles.'
-  },
-  {
-    title: 'C',
-    path: '/C',
     icon: <PawPrint className="w-8 h-8 text-green-600" />,
     description: 'Discover the diverse world of land animals, from majestic mammals to fascinating reptiles.'
   },
@@ -50,24 +70,7 @@ const categories = [
     icon: <Bird className="w-8 h-8 text-yellow-600" />,
     description: 'Learn about various bird species, their habitats, and behaviors.'
   },
-  {
-    title: 'Fruits',
-    path: '/fruits',
-    icon: <Apple className="w-8 h-8 text-red-600" />,
-    description: 'Explore nutritious and delicious fruits from around the world.'
-  },
-  {
-    title: 'Vegetables',
-    path: '/vegetables',
-    icon: <Carrot className="w-8 h-8 text-orange-600" />,
-    description: 'Discover healthy vegetables and their benefits for your well-being.'
-  },
-  {
-    title: 'Flowers',
-    path: '/flowers',
-    icon: <Flower2 className="w-8 h-8 text-pink-500" />,
-    description: 'Get to know beautiful flowers and their significance in culture and nature.'
-  },
+  
   {
     title: 'Vehicles',
     path: '/vehicles',
