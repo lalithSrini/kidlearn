@@ -33,6 +33,12 @@ const categories = [
     description: 'Discover the diverse world of land animals, from majestic mammals to fascinating reptiles.'
   },
   {
+    title: 'C',
+    path: '/C',
+    icon: <PawPrint className="w-8 h-8 text-green-600" />,
+    description: 'Discover the diverse world of land animals, from majestic mammals to fascinating reptiles.'
+  },
+  {
     title: 'Aquatic Life',
     path: '/aquatic',
     icon: <Fish className="w-8 h-8 text-blue-600" />,

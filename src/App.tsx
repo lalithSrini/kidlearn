@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, NavLink, Navigate, useNavigate, useLocation } from 'react-router-dom';
-import { Home, Leaf, Bird, Fish, Apple, Carrot, GraduationCap, Calculator, LogOut, CarTaxiFront, Flower2Icon, Loader, Gamepad2Icon, Menu, X } from 'lucide-react';
+import { Home, Leaf, Bird, Fish, Apple, Carrot, GraduationCap, Calculator, LogOut, CarTaxiFront, Flower2Icon, Loader, Gamepad2Icon, Menu, X,computer } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import HomePage from './pages/HomePage';
 import AnimalsPage from './pages/AnimalsPage';
+import CPage  from './pages/clanguage';
 import AquaticPage from './pages/AquaticPage';
 import BirdsPage from './pages/BirdsPage';
 import FruitsPage from './pages/FruitsPage';
@@ -62,6 +63,7 @@ const navColors = {
 const navItems = [
   { path: "/", label: "Home", icon: Home, color: navColors.home },
   { path: "/animals", label: "Animals", icon: Leaf, color: navColors.animals },
+  { path: "/C", label: "Programming", icon: computer, color: navColors.animals },
   { path: "/aquatic", label: "Aquatic", icon: Fish, color: navColors.aquatic },
   { path: "/birds", label: "Birds", icon: Bird, color: navColors.birds },
   { path: "/fruits", label: "Fruits", icon: Apple, color: navColors.fruits },
@@ -225,7 +227,7 @@ function AppRoutes() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <WebcamCapture onWebcamReady={setVideoElement} />
+      {/* <WebcamCapture onWebcamReady={setVideoElement} /> */}
       
       {/* React Toastify Container */}
       <ToastContainer
@@ -395,6 +397,7 @@ function AppRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/face" element={<FaceReg/>} />
           <Route path="/animals" element={<AnimalsPage />} />
+          <Route path="/C" element={<CPage />} />
           <Route path="/aquatic" element={<AquaticPage />} />
           <Route path="/birds" element={<BirdsPage />} />
           <Route path="/fruits" element={<FruitsPage />} />
